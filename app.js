@@ -105,7 +105,7 @@ let veryOldInventors = [];
 
 // Complete the exercise in the space below:
 
-veryOldInventors = inventors.filter((inventor) => inventor.year >= 1500 && inventor.year < 1599);
+veryOldInventors = inventors.filter((inventor) => inventor.year >= 1500 && inventor.year <= 1599);
 
 // Check your work:
 console.log("Exercise 1 my result: ", veryOldInventors);
@@ -168,7 +168,7 @@ let sortedByBirthYear = [];
 
 // Complete the exercise in the space below:
 
-sortedByBirthYear = [...inventors];
+sortedByBirthYear = [...inventors]; // copy array so as to not change original array
 sortedByBirthYear.sort((a, b) => a.year - b.year);
 
 // Check your work:
@@ -297,6 +297,7 @@ old or older.
 let isAdultPresent = null;
 
 // Complete the exercise in the space below:
+
 const yearNow = new Date().getFullYear();
 isAdultPresent = devs.some((dev) => yearNow - dev.year >= 18);
 
